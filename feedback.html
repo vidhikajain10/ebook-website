@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Feedback - Dare to Do</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins&display=swap" rel="stylesheet" />
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #FFF8F0, #E0F7FA);
+      background-size: 400% 400%;
+      animation: gradientFlow 15s ease infinite;
+    }
+    .title-font { font-family: 'Pacifico', cursive; }
+    .video-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+    .hero-content { position: relative; z-index: 1; }
+    .overlay {
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(4px);
+    }
+    @keyframes gradientFlow {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+  </style>
+</head>
+<body class="text-gray-800">
+
+<nav class="bg-[#FFEB80] shadow text-gray-800 p-4 flex justify-center gap-6 text-sm md:text-base font-medium">
+  <a href="index.html" class="hover:underline">Home</a>
+   <a href="feedback.html" class="hover:underline">Feedback</a>
+  <a href="about.html" class="hover:underline">About</a>
+</nav>
+
+<!-- Hero Section with cover1 video -->
+<section class="relative h-screen flex items-center justify-center text-center overlay px-4">
+  <video autoplay muted loop class="video-bg">
+    <source src="videos/cover.mp4" type="video/mp4" />
+  </video>
+  <div class="hero-content max-w-2xl">
+    <h1 class="text-5xl md:text-6xl title-font text-[#FFABAB] mb-4">We'd Love Your Feedback!</h1>
+    <p class="text-lg md:text-xl">Help us grow by sharing your experience and unlocking rewards 🌸</p>
+    <a href="https://forms.gle/EregzmEudkawLp3F6" target="_blank" class="mt-6 inline-block bg-[#FFEB80] text-gray-800 px-6 py-2 rounded-full shadow hover:scale-105 transition">Submit Feedback</a>
+  </div>
+</section>
+
+<footer class="bg-[#A0D8EF] text-center py-4 text-sm">
+  <p>Contact: riyasinghworks28@gmail.com | WhatsApp: 9569647178 | Call: 9606977638</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dare to Do: The Unstoppable Shelf</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins&display=swap" rel="stylesheet" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #FFF1F9, #E0F7FA);
+      background-size: 400% 400%;
+      animation: gradientFlow 15s ease infinite;
+    }
+    .title-font {
+      font-family: 'Pacifico', cursive;
+    }
+    @keyframes gradientFlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .video-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+</head>
+
+<body class="text-gray-800">
+
+<!-- Navbar -->
+<nav class="bg-[#FFEB80] shadow text-gray-800 p-4 flex justify-center gap-6 text-sm md:text-base font-medium">
+  <a href="index.html" class="hover:underline hover:text-pink-500 transition">Home</a>
+    <a href="feedback.html" class="hover:underline hover:text-pink-500 transition">Feedback</a>
+  <a href="about.html" class="hover:underline hover:text-pink-500 transition">About</a>
+</nav>
+
+<!-- Hero Section with background video -->
+<section class="relative h-screen flex items-center justify-center text-center px-4">
+  <video autoplay muted loop class="video-bg">
+    <source src="videos/cover.mp4" type="video/mp4" />
+  </video>
+  <div class="hero-content max-w-2xl overlay bg-white/60 p-6 rounded-xl">
+    <h1 class="text-5xl md:text-6xl title-font text-[#FFABAB] mb-4">Dare to Do: The Unstoppable You</h1>
+    <p class="text-lg md:text-xl">A 30-day motivational adventure to spark joy & confidence!</p>
+<div class="mt-6">
+
+  <a href="#books" class="bg-[#FFEB80] text-gray-800 px-6 py-2 rounded-full shadow hover:scale-105 transition">Start Reading</a>
+
+
+
+  </div>
+</section>
+
+<!-- Book Section with looped video + Buy Now -->
+<section class="relative py-20 px-6 text-center bg-white">
+  <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover opacity-20 z-0">
+    <source src="videos/cover2.mp4" type="video/mp4" />
+  </video>
+  <div class="relative z-10 max-w-md mx-auto">
+    <h2 class="text-4xl title-font text-[#FFABAB] mb-6">Featured Book</h2>
+    <div class="relative">
+      <video autoplay muted loop playsinline class="rounded-xl shadow-xl w-full max-w-xs mx-auto mb-4">
+        <source src="videos/bookvideo.mp4" type="video/mp4">
+      </video>
+      <a href="https://forms.gle/qCaWgth6a1cUq1oBA" target="_blank" class="mt-4 inline-block bg-[#FFEB80] text-gray-800 px-6 py-2 rounded-full shadow hover:scale-105 transition font-semibold">Buy Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- Author Section -->
+<section class="py-20 bg-[#FADADD]">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10 px-6">
+    <img src="images/riya-photo.jpg" class="w-56 h-56 object-cover rounded-full shadow-xl border-4 border-[#FFABAB]">
+    <div class="text-left">
+      <h2 class="text-4xl title-font text-[#6B0F1A] mb-2">Riya Singh</h2>
+      <p class="text-[#4B1E2F]">Hi! I'm Riya Singh, an MBA HR student & Gold Medalist. I created this book to help young minds believe in themselves through fun and meaningful challenges. 🌈</p>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-[#A0D8EF] text-center py-4 text-sm">
+  <p>Contact: riyasinghworks28@gmail.com | WhatsApp: 9569647178 | Call: 9606977638</p>
+</footer>
+
+</body>
+</html>

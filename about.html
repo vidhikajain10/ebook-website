@@ -26,7 +26,7 @@
     }
     .hero-content { position: relative; z-index: 1; }
     .overlay {
-      background: rgba(255, 255, 255, 0.6);
+      background: rgba(255, 255, 255, 0.7);
       backdrop-filter: blur(4px);
     }
     @keyframes gradientFlow {
@@ -38,37 +38,39 @@
 </head>
 <body class="text-gray-800">
 
-<nav class="bg-[#FFEB80] shadow text-gray-800 p-4 flex justify-center gap-6 text-sm md:text-base font-medium">
-  <a href="index.html" class="hover:underline">Home</a>
-  <a href="feedback.html" class="hover:underline">Feedback</a>
-  <a href="about.html" class="hover:underline">About</a>
-</nav>
+  <nav class="bg-[#FFEB80] shadow text-gray-800 p-4 flex flex-wrap justify-center gap-4 text-sm md:text-base font-medium">
+    <a href="index.html" class="hover:underline">Home</a>
+    <a href="feedback.html" class="hover:underline">Feedback</a>
+    <a href="about.html" class="hover:underline">About</a>
+  </nav>
 
-<!-- About Section -->
-<section class="relative h-screen flex items-center justify-center text-center overlay px-4">
-  <video autoplay muted loop class="video-bg">
-    <source src="cover2.mp4" type="video/mp4" />
-  </video>
-  <div class="hero-content max-w-3xl">
-    <h1 class="text-5xl md:text-6xl title-font text-[#FFABAB] mb-4">About Us</h1>
-    <p class="text-lg md:text-xl mb-4">“Dare to Do” is more than a book — it’s a movement! Empowering kids to grow brave, kind, and unstoppable 💪</p>
-    <div class="text-left bg-white bg-opacity-70 p-6 rounded-xl shadow-xl">
-      <h2 class="text-3xl title-font text-[#FFABAB] mb-2">Author: Riya Singh</h2>
-      <p class="mb-2 text-gray-700">Riya Singh is an MBA HR student and a Gold Medalist, passionate about inspiring children to find joy, confidence, and courage through her engaging 30-day motivational challenge book, "Dare to Do". Her soft storytelling and interactive style make the book a favorite among young dreamers.</p>
-      <p class="mb-4 text-gray-700">“Dare to Do” encourages self-belief, gratitude, and fun habits through small but meaningful tasks.</p>
+  <!-- About Section -->
+  <section class="relative min-h-screen flex items-center justify-center text-center overlay px-4">
+    <video autoplay muted loop class="video-bg max-h-screen">
+      <source src="cover2.mp4" type="video/mp4" />
+    </video>
+    
+    <div class="hero-content container mx-auto px-4 py-10">
+      <h1 class="text-4xl sm:text-5xl md:text-6xl title-font text-[#FFABAB] mb-6">About Us</h1>
+      <p class="text-base sm:text-lg md:text-xl mb-6">“Dare to Do” is more than a book — it’s a movement! Empowering kids to grow brave, kind, and unstoppable 💪</p>
+      
+      <div class="text-left bg-white bg-opacity-80 p-6 sm:p-8 rounded-xl shadow-xl">
+        <h2 class="text-2xl sm:text-3xl title-font text-[#FFABAB] mb-4">Author: Riya Singh</h2>
+        <p class="mb-3 text-gray-700 text-sm sm:text-base">Riya Singh is an MBA HR student and a Gold Medalist, passionate about inspiring children to find joy, confidence, and courage through her engaging 30-day motivational challenge book, "Dare to Do". Her soft storytelling and interactive style make the book a favorite among young dreamers.</p>
+        <p class="mb-4 text-gray-700 text-sm sm:text-base">“Dare to Do” encourages self-belief, gratitude, and fun habits through small but meaningful tasks.</p>
 
-      <h2 class="text-2xl font-semibold text-[#6B0F1A] mt-6 mb-2">Technical Team</h2>
-      <p class="text-gray-700">This website and interactive design experience were made possible through the dedicated work of our engineering contributor:</p>
-      <ul class="list-disc pl-5 mt-2 text-gray-700">
-        <li><strong>Vidhika Jain</strong> — Lead Developer & UX Designer (Integrated M.Tech in AI, VIT Bhopal). Responsible for full-stack development, frontend animations, responsive design, and smooth integration of video/interactive elements.</li>
-      </ul>
+        <h2 class="text-xl sm:text-2xl font-semibold text-[#6B0F1A] mt-6 mb-2">Technical Team</h2>
+        <p class="text-gray-700 text-sm sm:text-base">This website and interactive design experience were made possible through the dedicated work of our engineering contributor:</p>
+        <ul class="list-disc pl-5 mt-2 text-gray-700 text-sm sm:text-base">
+          <li><strong>Vidhika Jain</strong> — Lead Developer & UX Designer (Integrated M.Tech in AI, VIT Bhopal). Responsible for full-stack development, frontend animations, responsive design, and smooth integration of video/interactive elements.</li>
+        </ul>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<footer class="bg-[#A0D8EF] text-center py-4 text-sm">
-  <p>Contact: riyasinghworks28@gmail.com | WhatsApp: 9569647178 | Call: 9606977638</p>
-</footer>
+  <footer class="bg-[#A0D8EF] text-center py-4 text-sm">
+    <p>Contact: riyasinghworks28@gmail.com | WhatsApp: 9569647178 | Call: 9606977638</p>
+  </footer>
 
 </body>
 </html>

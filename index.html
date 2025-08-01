@@ -44,72 +44,83 @@
 
 <!-- Navbar -->
 <nav class="bg-[#FFEB80] shadow text-gray-800 p-4 flex justify-center gap-6 text-sm md:text-base font-medium">
-  <a href="index.html" class="hover:underline hover:text-pink-500 transition">Home</a>
-    <a href="feedback.html" class="hover:underline hover:text-pink-500 transition">Feedback</a>
+  <a href="#hero" class="hover:underline hover:text-pink-500 transition">Home</a>
+  <a href="feedback.html" class="hover:underline hover:text-pink-500 transition">Feedback</a>
   <a href="about.html" class="hover:underline hover:text-pink-500 transition">About</a>
 </nav>
 
 <!-- Hero Section with background video -->
-<section class="relative h-screen flex items-center justify-center text-center px-4">
+<section id="hero" class="relative h-screen flex items-center justify-center text-center px-4">
   <video autoplay muted loop class="video-bg">
     <source src="cover.mp4" type="video/mp4" />
   </video>
   <div class="hero-content max-w-2xl overlay bg-white/60 p-6 rounded-xl">
     <h1 class="text-5xl md:text-6xl title-font text-[#FFABAB] mb-4">Dare to Do: The Unstoppable You</h1>
     <p class="text-lg md:text-xl">A 30-day motivational adventure to spark joy & confidence!</p>
-<div class="mt-6">
-
- <a href="#books" class="bg-[#FFEB80] text-gray-800 px-6 py-2 rounded-full shadow hover:scale-105 transition">Start Reading</a>
-
-
-
+    <div class="mt-6">
+      <a href="#book-section" class="bg-[#FFEB80] text-gray-800 px-6 py-2 rounded-full shadow hover:scale-105 transition">Start Reading</a>
+    </div>
   </div>
 </section>
 
 <!-- Book Section with looped video + Buy Now -->
-<section class="relative py-20 px-6 text-center bg-white">
+<section id="book-section" class="relative py-20 px-6 text-center bg-white">
   <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover opacity-20 z-0">
     <source src="cover2.mp4" type="video/mp4" />
   </video>
-  <div class="relative z-10 max-w-md mx-auto">
-    <h2 class="text-4xl title-font text-[#FFABAB] mb-6">Featured Book</h2>
-    <div class="relative">
+  <div class="relative z-10 max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-center gap-10">
+    <div class="relative cursor-pointer group" onclick="toggleDescription()">
       <video autoplay muted loop playsinline class="rounded-xl shadow-xl w-full max-w-xs mx-auto mb-4">
         <source src="bookvideo2.mp4" type="video/mp4">
       </video>
-      <a href="https://forms.gle/qCaWgth6a1cUq1oBA" target="_blank" class="mt-4 inline-block bg-[#FFEB80] text-gray-800 px-6 py-2 rounded-full shadow hover:scale-105 transition font-semibold">Buy Now</a>
+      <a href="https://forms.gle/qCaWgth6a1cUq1oBA" target="_blank" class="mt-2 inline-block bg-[#FFEB80] text-gray-800 px-6 py-2 rounded-full shadow hover:scale-105 transition font-semibold">Buy Now</a>
+    </div>
+
+    <div id="book-desc" class="hidden md:block p-6 bg-[#FFF1F9] rounded-xl shadow-lg text-left max-w-md transition-all duration-700 transform opacity-0 translate-y-6">
+      <h3 class="text-2xl title-font text-[#FFABAB] mb-2">About the Book</h3>
+      <p class="text-gray-700 text-base">
+        ‘Dare to Do: The Unstoppable You’ is a 30-day motivational journey designed for young readers to build confidence, find joy, and believe in themselves. With daily challenges and positive affirmations, this book helps unlock the reader’s full potential.
+      </p>
     </div>
   </div>
 </section>
 
 <section class="py-20 bg-[#FADADD]">
   <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10 px-6">
-    
-    <!-- Author Image (Rectangle with rounded corners) -->
     <div class="w-full sm:w-72 max-w-xs">
-      <img 
-        src="riya-photo.jpg" 
-        alt="Riya Singh" 
-        class="w-full h-auto rounded-2xl shadow-xl border-4 border-[#FFABAB] object-cover object-center" />
+      <img src="riya-photo.jpg" alt="Riya Singh" class="w-full h-auto rounded-2xl shadow-xl border-4 border-[#FFABAB] object-cover object-center" />
     </div>
-
-    <!-- Author Text -->
     <div class="text-center md:text-left mt-6 md:mt-0">
       <h2 class="text-3xl sm:text-4xl title-font text-[#6B0F1A] mb-2">Riya Singh</h2>
       <p class="text-[#4B1E2F] text-base sm:text-lg">
         Hi! I'm Riya Singh, an MBA HR student & Gold Medalist. I created this book to help young minds believe in themselves through fun and meaningful challenges. 🌈
       </p>
     </div>
-
   </div>
 </section>
-
-
 
 <!-- Footer -->
 <footer class="bg-[#A0D8EF] text-center py-4 text-sm">
   <p>Contact: riyasinghworks28@gmail.com | WhatsApp: 9569647178 | Call: 9606977638</p>
 </footer>
+
+<!-- JavaScript for animated book description -->
+<script>
+  function toggleDescription() {
+    const desc = document.getElementById("book-desc");
+    if (desc.classList.contains("hidden")) {
+      desc.classList.remove("hidden");
+      setTimeout(() => {
+        desc.classList.remove("opacity-0", "translate-y-6");
+      }, 50);
+    } else {
+      desc.classList.add("opacity-0", "translate-y-6");
+      setTimeout(() => {
+        desc.classList.add("hidden");
+      }, 500);
+    }
+  }
+</script>
 
 </body>
 </html>
